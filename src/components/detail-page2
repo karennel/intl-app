@@ -1,0 +1,13 @@
+import React, { Component } from 'react'
+
+class DetailPageTwo extends Component {
+    render() {
+        return (
+            <div>
+                Detail Page Two
+            </div>
+        );
+    }
+}
+
+export default DetailPageTwo
