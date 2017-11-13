@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
+import DetailExtend from './detail-extend'
 
 class Detail extends Component {
     render() {
         return (
             <div>
-                {this.props.children}
+                detail start 
+                <br/>
                 {this.props.message}
                 <br/>
-                Other content
+                <DetailExtend extended={this.props.children}>
+                </DetailExtend>
+                <br/>
+                Other Detail Content
+                detail end <br/>
             </div>
         );
     }
