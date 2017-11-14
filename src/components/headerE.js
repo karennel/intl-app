@@ -4,7 +4,7 @@ import Wrapper from '../styles/wrapper-style';
 import HeaderStyle from '../styles/header-style'; 
 
 
-class HeaderCD extends Component {
+class HeaderE extends Component {
   constructor(props) {
     super(props); 
 
@@ -25,11 +25,8 @@ onChangeClick(event) {
     return (
         <div>
             <Wrapper>
-            <button onClick={() => this.onChangeClick('OptionC')}>OptionC</button>
-            <button onClick={() => this.onChangeClick('OptionD')}>OptionD</button>
-            <button onClick={() => this.onChangeClick('OptionE')}>OptionE</button>
                 <HeaderStyle>
-                    {this.state.headerstate}
+                    Just some additional content from HeaderE
                 </HeaderStyle>
             </Wrapper>
         </div>
@@ -37,4 +34,4 @@ onChangeClick(event) {
   }
 }
 
-export default HeaderCD;
+export default HeaderE;

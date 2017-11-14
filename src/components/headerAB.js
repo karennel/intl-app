@@ -1,42 +1,42 @@
 import React, { Component } from 'react';
 
-import Wrapper from '../styles/wrapper-style'; 
-import HeaderStyle from '../styles/header-style'; 
+import Wrapper from '../styles/wrapper-style';
+import HeaderStyle from '../styles/header-style';
 
 
-class Header extends Component {
-  constructor(props) {
-    super(props); 
+export default class HeaderAB extends Component {
 
-    this.state = {headerstate:"This is the header state AB"}; 
+  // constructor(props) {
+  //   super(props);
 
-    this.onChangeClick = this.onChangeClick.bind(this); 
-  }
+  //   this.state = { headerstate: "This is the header state CD" };
 
-  onChangeClick(event) {
-    let newstate = "Header state set to " + event; 
-    this.setState({headerstate:newstate}); 
-  
-  }
+  //   this.onChangeClick = this.onChangeClick.bind(this);
+  // }
+
+  // onChangeClick(event) {
+  //   let newstate = "Called from HEADERAB - newstate: " + event;
+  //   this.setState({ headerstate: newstate });
+
+  // }
 
   render() {
-    console.log('Children', this.props.children)
-    
     return (
-        <div>
-            header start <br/>
-            <Wrapper>
-                <button onClick={() => this.onChangeClick('OptionA')}>OptionA</button>
-                <button onClick={() => this.onChangeClick('OptionB')}>OptionB</button>
-                <HeaderStyle>
-                    This is the headerAB
-                </HeaderStyle>
-            </Wrapper>
-            header end <br/>
-            {<p>{this.state.headerstate}</p>}
-        </div>
+      <div>
+        <Wrapper>
+
+          This is printed from headerAB <br/>
+          {/* <button onClick={() => this.onChangeClick('OptionA')}>OptionA</button>
+          <button onClick={() => this.onChangeClick('OptionB')}>OptionB</button> */}
+          <button onClick={this.props.onChangeClick}>OptionA</button>
+          <button onClick={this.props.onChangeClick}>OptionB</button>
+          <br/>
+          This is the props from the wrapped component: <br/>
+          {this.props.value}
+
+        </Wrapper>
+      </div>
     );
   }
 }
 
-export default Header;
