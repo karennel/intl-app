@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import Header from './components/header'
+import HeaderAB from './components/headerAB'
+import HeaderCD from './components/headerCD'
 import Detail from './components/detail'
 
 class App extends Component {
@@ -9,7 +10,8 @@ class App extends Component {
     return (
       <div>
         App start <br/>
-        <Header />
+        <HeaderAB />
+        <HeaderCD />
         
         <Detail message="Detail message passed in props">
           <div>this is children1 of Detail</div>
