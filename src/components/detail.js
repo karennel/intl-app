@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import DetailExtend from './detail-extend'
+import CoreDetailExtend from './core-detail-extend'
 
 class Detail extends Component {
     render() {
@@ -9,11 +9,11 @@ class Detail extends Component {
                 <br/>
                 {this.props.message}
                 <br/>
-                <DetailExtend extended={this.props.children}>
-                </DetailExtend>
+                <CoreDetailExtend extended={this.props.children}>
+                </CoreDetailExtend>
                 <br/>
-                Other Detail Content
-                detail end <br/>
+                Actual Native Detail Content<br/>
+                detail end 
             </div>
         );
     }

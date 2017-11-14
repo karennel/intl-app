@@ -6,7 +6,7 @@ class MyDetail extends Detail {
     render() {
         return (
             <div>
-                <Detail/>
+                
                 This is MyDetail
             </div>
         );
