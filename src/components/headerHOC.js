@@ -7,14 +7,24 @@ export default function HeaderHOC(WrappedHeader) {
     return class Header extends Component {
         constructor(props) {
             super(props);
-
             this.state = { headerstate: "This is the header state set in construct"};
-
             this.onChangeClick = this.onChangeClick.bind(this);
            
         }
 
-        onChangeClick() {
+        componentWillMount() {
+            const startTime = Date.now();
+            this.setState({ startTime });
+            console.log(`${WrappedHeader.name} MOUNTING ${startTime}`);
+          }
+          componentDidMount() {
+            const endTime = Date.now();
+            console.log(`${WrappedHeader.name} MOUNTED ${endTime}`);
+            console.log(`${WrappedHeader.name} TOTAL TIME ${endTime - this.state.startTime}`);        
+          }
+
+          onChangeClick() {
+            this.setState ({headerstate: "this is the new state"})
             console.log("this is from onChangeClick")
         }
       
@@ -27,7 +37,7 @@ export default function HeaderHOC(WrappedHeader) {
                             <HeaderStyle>
                                 This is the header printed from HOCHeader <br/>
                                 Below is the content from the WrappedHeader:
-                                <WrappedHeader  ref="customheader" {...this.props} onClick={this.onChangeClick} />
+                                <WrappedHeader {...this.props}  />
                                 Props in header: <br/>
                                 {this.props.value}<br/>
                                 State in header:<br/> 

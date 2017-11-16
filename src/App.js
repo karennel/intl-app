@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
-import HeaderAB from './components/headerAB'
-import HeaderCD from './components/headerCD'
+// import HeaderAB from './components/headerAB'
+// import HeaderCD from './components/headerAB'
+// import HeaderE from './components/headerE'
+
+import Headermain from './components/headermain'
 import Detail from './components/detail'
 
 class App extends Component {
@@ -10,8 +13,11 @@ class App extends Component {
     return (
       <div>
         App start <br/>
-        <HeaderAB />
+        {/* <HeaderAB />
         <HeaderCD />
+        <HeaderE /> */}
+
+        <Headermain value="this is the value passed from props"/>
         
         <Detail message="Detail message passed in props">
           <div>this is children1 of Detail</div>

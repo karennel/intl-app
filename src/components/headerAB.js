@@ -28,12 +28,11 @@ export default class HeaderAB extends Component {
           This is printed from headerAB <br/>
           {/* <button onClick={() => this.onChangeClick('OptionA')}>OptionA</button>
           <button onClick={() => this.onChangeClick('OptionB')}>OptionB</button> */}
-          <button onClick={this.props.onChangeClick}>OptionA</button>
-          <button onClick={this.props.onChangeClick}>OptionB</button>
+          <button onClick={() => this.props.onChangeClick()}>OptionA</button>
+          <button onClick={() => this.props.onChangeClick()}>OptionB</button>
           <br/>
           This is the props from the wrapped component: <br/>
           {this.props.value}
-
         </Wrapper>
       </div>
     );
