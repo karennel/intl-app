@@ -7,17 +7,23 @@ import React, { Component } from 'react';
 import Headermain from './components/headermain'
 import Detail from './components/detail'
 
+
+import ClickLoggingButton from './components/test'
+import ItemList from './components/testredux'
+
 class App extends Component {
 
   render() {
     return (
       <div>
-        App start <br/>
+        <ItemList/>
+        {/* <ClickLoggingButton value="this is the value from LoggingButton"/> */}
+        {/* App start <br/> */}
         {/* <HeaderAB />
         <HeaderCD />
         <HeaderE /> */}
 
-        <Headermain value="this is the value passed from props"/>
+        {/* <Headermain value="this is the value passed from props"/>
         
         <Detail message="Detail message passed in props">
           <div>this is children1 of Detail</div>
@@ -25,8 +31,8 @@ class App extends Component {
           <div>this is children3 of Detail</div>
           <div>this is children4 of Detail</div>
           
-        </Detail>
-        App end <br/>
+        </Detail> */}
+        {/* App end <br/> */}
       </div>
     );
   }
